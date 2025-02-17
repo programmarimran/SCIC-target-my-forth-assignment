@@ -1,8 +1,6 @@
 
 
-//************************************************************* */
 
-//Function no =1;
 function cashOut(money) {
     if(typeof money=="number" && money>=0){
         const moneyCharge =money*1.75/100;
@@ -14,8 +12,7 @@ function cashOut(money) {
     
 }
 
-//*********************************************************************** */
-//Function no=2;
+
 function  validEmail( email ) {
     if(typeof email!=="string"){
         return "Invalid"
@@ -34,8 +31,7 @@ function  validEmail( email ) {
     return result;
 }
 
-//*************************************************************************** */
-//Function no=3;
+
 function  electionResult( votes ) {
     if(Array.isArray(votes)==false){
         return "Invalid";
@@ -60,13 +56,10 @@ function  electionResult( votes ) {
        else{
         return "Banana";
        }
-      
-       
-        
+           
 }
 
-//******************************************************************************* */
-//Function no=4;
+
 function  isBestFriend( f1 , f2 ) {
     if(typeof f1!=="object" || Array.isArray(f1) ){
         return  "Invalid";
@@ -83,9 +76,7 @@ function  isBestFriend( f1 , f2 ) {
    }
 }
 
-//*********************************************************************** */
 
-//Function no=5
 function  calculateWatchTime( times ) {
     
     if(Array.isArray(times)==false){
@@ -131,11 +122,11 @@ function  calculateWatchTime( times ) {
 
 
 
-let argument = cashOut(-350)
+let argument = cashOut(350)
 console.log(argument)
 
 
-let argument2 =validEmail("programming-hero.com")
+let argument2 =validEmail(58696)
 console.log(argument2)
 
 
