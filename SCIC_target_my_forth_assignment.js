@@ -93,8 +93,8 @@ function  calculateWatchTime( times ) {
         sum +=value;
     }
     const hours = Math. floor(sum / 3600);
-    const minutes = Math. round((sum - (hours * 3600)) / 60);
-    const seconds = sum - (hours * 3600) - (minutes * 60); 
+    const minutes = Math. floor((sum - (hours * 3600)) / 60);
+    const seconds = Math.floor(sum - (hours * 3600) - (minutes * 60)); 
     
    const object ={
     hour:hours,
@@ -107,39 +107,3 @@ function  calculateWatchTime( times ) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-let argument = cashOut(350)
-console.log(argument)
-
-
-let argument2 =validEmail(58696)
-console.log(argument2)
-
-
-let arry =["mango", "BananA", "na vote", "na vote"]
-console.log( electionResult(arry))
-
-
-const argument5 = isBestFriend(
-    { name: "hashem", roll: 1 , bestFriend: 1},
-    { name: "kashem" , roll: 1, bestFriend: 1 }
-)
-console.log(argument5)
-
-
-const arry9 =[100, 3800, "90" ]
-console.log(calculateWatchTime(arry9))
