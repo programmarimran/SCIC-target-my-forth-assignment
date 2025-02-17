@@ -14,9 +14,6 @@ function cashOut(money) {
     
 }
 
-let argument = cashOut(2000)
-console.log(argument)
-
 //*********************************************************************** */
 //Function no=2;
 function  validEmail( email ) {
@@ -36,9 +33,6 @@ function  validEmail( email ) {
     const result =checkEmail.test(email)
     return result;
 }
-let argument2 =validEmail("king@yahoo.com")
-console.log(argument2)
-
 
 //*************************************************************************** */
 //Function no=3;
@@ -70,13 +64,11 @@ function  electionResult( votes ) {
        
         
 }
-let arry =["mango", "BananA", "na vote", "na vote"]
-console.log( electionResult(arry))
 
 //******************************************************************************* */
 //Function no=4;
 function  isBestFriend( f1 , f2 ) {
-    if(typeof f1!=="object" || Array.isArray(f1) && typeof f2!=="object" || Array.isArray(f2)){
+    if(typeof f1!=="object" || Array.isArray(f1) ){
         return  "Invalid";
     }
     else if( typeof f2!=="object" || Array.isArray(f2)){
@@ -91,8 +83,72 @@ function  isBestFriend( f1 , f2 ) {
    }
 }
 
+//*********************************************************************** */
+
+//Function no=5
+function  calculateWatchTime( times ) {
+    
+    if(Array.isArray(times)==false){
+        return "Invalid";
+    }
+    for(const index of times){
+        if(typeof index!=="number"){
+            return "Invalid";
+        }
+    }
+
+    let sum =0;
+    for(const value of times){
+        sum +=value;
+    }
+    const hours = Math. floor(sum / 3600);
+    const minutes = Math. round((sum - (hours * 3600)) / 60);
+    const seconds = sum - (hours * 3600) - (minutes * 60); 
+    
+   const object ={
+    hour:hours,
+    minute:minutes,
+    second:seconds
+   }
+
+   return object;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let argument = cashOut(-350)
+console.log(argument)
+
+
+let argument2 =validEmail("programming-hero.com")
+console.log(argument2)
+
+
+let arry =["mango", "BananA", "na vote", "na vote"]
+console.log( electionResult(arry))
+
+
 const argument5 = isBestFriend(
     { name: "hashem", roll: 1 , bestFriend: 1},
     { name: "kashem" , roll: 1, bestFriend: 1 }
 )
 console.log(argument5)
+
+
+const arry9 =[100, 3800, "90" ]
+console.log(calculateWatchTime(arry9))
