@@ -17,18 +17,33 @@ function  validEmail( email ) {
     if(typeof email!=="string"){
         return "Invalid"
     }
+
+    const finalInput =email.trim();
+    console.log(finalInput);
+
+
     let notIcon =".-_+@";
     for(const singleIcon of notIcon){
-        if(email.startsWith(singleIcon)){
+        if(finalInput.startsWith(singleIcon)){
             return false;
         }
     }
-    if(email.endsWith(".com")===false){
+
+    let checkAtdarate =finalInput.includes("@");
+    if(checkAtdarate==false){
         return false;
     }
-    const checkEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    const result =checkEmail.test(email)
-    return result;
+
+    else if(finalInput.includes(" ")){
+        return false;
+    }
+
+    else if(finalInput.endsWith(".com")===false){
+         return false;
+     }
+
+     else{return true;}
+
 }
 
 
