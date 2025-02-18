@@ -19,8 +19,7 @@ function  validEmail( email ) {
     }
 
     const finalInput =email.trim();
-    console.log(finalInput);
-
+   
 
     let notIcon =".-_+@";
     for(const singleIcon of notIcon){
@@ -122,3 +121,9 @@ function  calculateWatchTime( times ) {
 }
 
 
+
+
+
+
+let check = calculateWatchTime("kisfklh")
+console.log(check)
