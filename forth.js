@@ -67,7 +67,6 @@ function  calculateWatchTime( times ) {
 }
 
 const arry =[100, 3800, 90]
-	// { hour: 1, minute: 2, second:5 }
 console.log(calculateWatchTime(arry))
 
 
