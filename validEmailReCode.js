@@ -2,24 +2,35 @@ function  validEmail( email ) {
     if(typeof email!=="string"){
         return "Invalid"
     }
+
+    const finalInput =email.trim();
+    console.log(finalInput);
+
+
     let notIcon =".-_+@";
     for(const singleIcon of notIcon){
-        if(email.startsWith(singleIcon)){
+        if(finalInput.startsWith(singleIcon)){
             return false;
         }
     }
 
-let checkAtdarate =email.includes("@");
-if(checkAtdarate==false){
-    return false;
+    let checkAtdarate =finalInput.includes("@");
+    if(checkAtdarate==false){
+        return false;
+    }
+
+    else if(finalInput.includes(" ")){
+        return false;
+    }
+
+    else if(finalInput.endsWith(".com")===false){
+         return false;
+     }
+
+     else{return true;}
+
 }
 
-else if(email.endsWith(".com")===false){
-     return false;
- }
-
- else{return true;}
-}
 
 
 
@@ -28,9 +39,5 @@ else if(email.endsWith(".com")===false){
 
 
 
-
-
-
-
-let email =validEmail("he ro@alom.com" )
-console.log(email)
+let finalInput =validEmail(        "  programmarimran@gmail.com   "     )
+console.log(finalInput)
